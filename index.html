@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waqar &amp; Aqsa | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Classic ornate outer frame -->
+<div class="page-frame" aria-hidden="true">
+  <span class="frame-corner tl">❦</span>
+  <span class="frame-corner tr">❦</span>
+  <span class="frame-corner bl">❦</span>
+  <span class="frame-corner br">❦</span>
+</div>
+
+<!-- Floral petals drifting over the whole page -->
+<div class="petals" aria-hidden="true">
+  <span class="petal p1">❀</span>
+  <span class="petal p2">❀</span>
+  <span class="petal p3">❀</span>
+  <span class="petal p4">❀</span>
+  <span class="petal p5">❀</span>
+</div>
+
+<!-- Envelope opening intro -->
+<div id="envelopeIntro">
+  <div class="intro-petals" aria-hidden="true">
+    <span class="petal p1">❀</span>
+    <span class="petal p2">❀</span>
+    <span class="petal p3">❀</span>
+    <span class="petal p4">❀</span>
+  </div>
+  <div class="envelope-scene">
+    <button type="button" class="envelope" id="envelopeBtn" aria-label="Open your invitation">
+      <span class="envelope-pocket-back"></span>
+      <span class="letter">
+        <span class="letter-monogram">W<span class="amp">&amp;</span>A</span>
+        <span class="letter-line">You're Invited</span>
+        <span class="letter-sub">Oct 17, 2026</span>
+      </span>
+      <span class="envelope-pocket-front"></span>
+      <span class="envelope-flap"></span>
+      <span class="seal">W&amp;A</span>
+    </button>
+    <p class="tap-hint" id="tapHint">Tap the envelope to open your invitation</p>
+  </div>
+</div>
+
+<!-- Floating nav dots -->
+<nav id="dotNav" aria-label="Section navigation">
+  <a href="#hero" class="dot active" data-label="Home"></a>
+  <a href="#couple" class="dot" data-label="Couple"></a>
+  <a href="#reveal" class="dot" data-label="Reveal"></a>
+  <a href="#countdown" class="dot" data-label="Countdown"></a>
+  <a href="#timeline" class="dot" data-label="Timeline"></a>
+  <a href="#venue" class="dot" data-label="Venue"></a>
+  <a href="#events" class="dot" data-label="Events"></a>
+  <a href="#gifts" class="dot" data-label="Gifts"></a>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="section hero">
+  <div class="monogram">W<span class="amp">&amp;</span>A</div>
+  <div class="ornament top"></div>
+  <p class="eyebrow">You're Invited!</p>
+  <h1 class="names"><span>Waqar</span><span class="amp">&amp;</span><span>Aqsa</span></h1>
+  <p class="tagline">Together with their families, request the honor of your presence</p>
+  <div class="hero-date">
+    <span class="day">Saturday</span>
+    <span class="full-date" id="heroDate">October 17, 2026</span>
+    <span class="time">10:00 AM</span>
+  </div>
+  <a href="#couple" class="scroll-cue" aria-label="Scroll to begin">
+    <span class="scroll-cue-mouse"><span class="scroll-cue-wheel"></span></span>
+    <span class="scroll-cue-text">Scroll</span>
+  </a>
+  <div class="ornament bottom"></div>
+</section>
+
+<!-- COUPLE -->
+<section id="couple" class="section couple">
+  <h2 class="section-title">The Couple</h2>
+  <div class="couple-grid">
+    <div class="couple-card">
+      <div class="portrait">WK</div>
+      <h3>Waqar</h3>
+      <p class="rel">Son of Mr. &amp; Mrs. Muzzamil Hussain</p>
+    </div>
+    <div class="couple-and">&amp;</div>
+    <div class="couple-card">
+      <div class="portrait">AP</div>
+      <h3>Aqsa</h3>
+      <p class="rel">Daughter of Mr. &amp; Mrs. Mubashir Nadeem (Late)</p>
+    </div>
+  </div>
+  <p class="blessing">We are honored to welcome you to the wedding ceremony of Waqar &amp; Aqsa.
+  As they begin their journey together in faith and love, we thank you for being part of this blessed occasion ❤</p>
+</section>
+
+<!-- SCRATCH TO REVEAL -->
+<section id="reveal" class="section reveal">
+  <h2 class="section-title">Scratch to Reveal</h2>
+  <p class="hint">Use your mouse or finger to scratch the card below</p>
+  <div class="scratch-wrap">
+    <canvas id="scratchCanvas" width="320" height="320"></canvas>
+    <div class="scratch-reveal-content">
+      <p class="reveal-text">Save the Date</p>
+      <p class="reveal-sub">October 17, 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countdown" class="section countdown-section">
+  <h2 class="section-title">Counting Down to Forever</h2>
+  <div class="countdown" id="countdown">
+    <div class="cd-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="cd-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="cd-box"><span id="cd-mins">00</span><small>Minutes</small></div>
+    <div class="cd-box"><span id="cd-secs">00</span><small>Seconds</small></div>
+  </div>
+</section>
+
+<!-- TIMELINE / VENUE -->
+<section id="timeline" class="section timeline-section">
+  <h2 class="section-title">Program Timeline</h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <h4>Guest Arrival</h4>
+      <p class="tl-date">Oct 17, 2026, 10:00 AM</p>
+      <p class="tl-desc">We warmly welcome you..!</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <h4>Wedding Ceremony</h4>
+      <p class="tl-date">Oct 17, 2026, 10:30 AM</p>
+      <p class="tl-desc">Your gracious presence is requested ❤</p>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <h4>Reception</h4>
+      <p class="tl-date">Oct 19, 2026, 7:30 PM</p>
+      <p class="tl-desc">Your gracious presence is requested at the Reception at 7:30 PM onwards.</p>
+    </div>
+  </div>
+</section>
+
+<section id="venue" class="section venue-section">
+  <h2 class="section-title">Venue</h2>
+  <div class="venue-card">
+    <h3>The Grand Palace</h3>
+    <p>Apollo Bandar, Colaba, Mumbai, Maharashtra 400001</p>
+    <a class="btn-outline" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+  </div>
+
+  <h2 class="section-title">Dress Code</h2>
+  <div class="dress-grid">
+    <div class="dress-card">
+      <h4>Women</h4>
+      <p>Elegant formal attire in pastel or jewel tones</p>
+    </div>
+    <div class="dress-card">
+      <h4>Men</h4>
+      <p>Suit or traditional formal wear</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRE-WEDDING EVENTS -->
+<section id="events" class="section events-section">
+  <h2 class="section-title">Pre-Wedding Events</h2>
+  <div class="events-grid">
+    <div class="event-card">
+      <h4>Mehndi</h4>
+      <p class="tl-date">Oct 14, 2026, 9:30 PM</p>
+      <p>At Bride's House</p>
+    </div>
+    <div class="event-card">
+      <h4>Haldi</h4>
+      <p class="tl-date">Oct 15, 2026, 8:30 PM</p>
+      <p>At Groom's House</p>
+    </div>
+    <div class="event-card">
+      <h4>Sangeet</h4>
+      <p class="tl-date">Oct 16, 2026, 9:00 PM</p>
+      <p>At The Grand Palace</p>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>Transportation</h4>
+      <p>Shuttle service will be available from the city center to the venue. Pickup point: Central Station at 3:30 PM.</p>
+    </div>
+    <div class="info-card">
+      <h4>Accommodation</h4>
+      <p>Special rates at The Grand Palace (5 min from venue). Use code WEDDING2026 when booking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GIFTS -->
+<section id="gifts" class="section gifts-section">
+  <h2 class="section-title">Gifts</h2>
+  <p class="gifts-text">Your love, blessings, and presence are the greatest gifts we could ever ask for.</p>
+</section>
+
+<footer class="footer">
+  <p>Waqar &amp; Aqsa</p>
+  <p class="footer-note">Made with ❤ for our special day</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

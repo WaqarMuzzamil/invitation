@@ -70,6 +70,7 @@ html.intro-active, html.intro-active body { overflow: hidden; height: 100%; }
   position: fixed; inset: 0; z-index: 999;
   background: radial-gradient(ellipse at center, var(--maroon-light) 0%, var(--maroon-dark) 80%);
   display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem;
   transition: opacity 0.8s ease, visibility 0.8s ease;
   overflow: hidden;
 }
@@ -164,6 +165,9 @@ html.intro-active, html.intro-active body { overflow: hidden; height: 100%; }
   letter-spacing: 1.5px;
   font-size: 0.9rem;
   text-transform: uppercase;
+  text-align: center;
+  max-width: 280px;
+  padding: 0 1rem;
   opacity: 0.85;
   animation: hintPulse 2.4s ease-in-out infinite;
 }
@@ -259,7 +263,7 @@ html.intro-active, html.intro-active body { overflow: hidden; height: 100%; }
   font-size: clamp(2.8rem, 8vw, 5.5rem);
   font-weight: 700;
   letter-spacing: 2px;
-  display: flex; align-items: center; gap: 1.2rem;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.2rem;
   background: linear-gradient(120deg, var(--gold) 25%, var(--gold-light) 50%, var(--gold) 75%);
   background-size: 220% auto;
   -webkit-background-clip: text;
@@ -629,4 +633,36 @@ html.intro-active, html.intro-active body { overflow: hidden; height: 100%; }
 @media (max-width: 500px) {
   .scratch-wrap { width: 260px; height: 260px; }
   #scratchCanvas { width: 260px; height: 260px; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 3.5rem 1.2rem; }
+  .names { gap: 0.5rem 0.9rem; letter-spacing: 1px; }
+  .ornament { width: 150px; }
+  .ornament::after { font-size: 0.75rem; padding: 0 10px; }
+  .monogram { width: 62px; height: 62px; font-size: 1.1rem; margin-bottom: 1.2rem; }
+  .eyebrow { font-size: 1.6rem; }
+  .tagline { font-size: 1.05rem; }
+  .hero-date .full-date { font-size: 1.3rem; }
+
+  .envelope { width: 230px; height: 158px; }
+  .letter-monogram { font-size: 1rem; }
+  .letter-line { font-size: 1.3rem; }
+  .letter-sub { font-size: 0.7rem; }
+  .seal { width: 32px; height: 32px; font-size: 0.6rem; }
+
+  .couple-grid { flex-direction: column; }
+  .couple-card { width: 100%; max-width: 260px; padding: 1.8rem 1.6rem; }
+  .couple-and { font-size: 2.2rem; }
+
+  .countdown { gap: 0.9rem; }
+  .cd-box { width: 74px; height: 74px; }
+  .cd-box span { font-size: 1.6rem; }
+
+  .venue-card { padding: 1.6rem; }
+  .dress-card, .event-card, .info-card { width: 100%; max-width: 280px; }
+
+  .btn-outline, .btn-solid { padding: 0.7rem 1.7rem; font-size: 0.85rem; }
+  .section-title { font-size: 1.35rem; gap: 0.8rem; }
+  .section-title::before, .section-title::after { width: 32px; }
 }

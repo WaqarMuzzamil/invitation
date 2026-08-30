@@ -14,11 +14,37 @@ envelopeBtn.addEventListener('click', () => {
   if (envelopeBtn.classList.contains('open')) return;
   envelopeBtn.classList.add('open');
   tapHint.classList.add('fade-out');
+  startBackgroundMusic();
 
   setTimeout(() => {
     envelopeIntro.classList.add('hidden');
     document.documentElement.classList.remove('intro-active');
   }, 1400);
+});
+
+// ==== Background music ====
+const bgMusic = document.getElementById('bgMusic');
+const musicToggle = document.getElementById('musicToggle');
+
+function setMusicState(playing) {
+  musicToggle.classList.toggle('playing', playing);
+  musicToggle.setAttribute('aria-pressed', String(playing));
+}
+
+function startBackgroundMusic() {
+  bgMusic.volume = 0.5;
+  bgMusic.play()
+    .then(() => setMusicState(true))
+    .catch(() => setMusicState(false)); // autoplay blocked; user can start it via the toggle
+}
+
+musicToggle.addEventListener('click', () => {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => setMusicState(true)).catch(() => {});
+  } else {
+    bgMusic.pause();
+    setMusicState(false);
+  }
 });
 
 // ==== Scroll reveal ====

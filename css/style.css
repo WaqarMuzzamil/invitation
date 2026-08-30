@@ -174,6 +174,39 @@ html.intro-active, html.intro-active body { overflow: hidden; height: 100%; }
 .tap-hint.fade-out { opacity: 0; transition: opacity 0.4s ease; }
 @keyframes hintPulse { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
 
+/* Music toggle */
+.music-toggle {
+  position: fixed;
+  left: 1.2rem; bottom: 1.2rem;
+  z-index: 1000;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: rgba(43, 10, 18, 0.85);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.music-toggle:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5); }
+.music-bars { display: flex; align-items: flex-end; gap: 3px; height: 16px; }
+.music-bars span {
+  width: 3px;
+  background: var(--gold);
+  border-radius: 1px;
+  height: 6px;
+  animation-play-state: paused;
+}
+.music-bars span:nth-child(1) { animation: bar1 0.9s ease-in-out infinite; }
+.music-bars span:nth-child(2) { animation: bar2 0.9s ease-in-out infinite 0.2s; }
+.music-bars span:nth-child(3) { animation: bar3 0.9s ease-in-out infinite 0.4s; }
+.music-toggle.playing .music-bars span { animation-play-state: running; }
+.music-toggle:not(.playing) .music-bars span { height: 6px; }
+@keyframes bar1 { 0%, 100% { height: 6px; } 50% { height: 16px; } }
+@keyframes bar2 { 0%, 100% { height: 10px; } 50% { height: 4px; } }
+@keyframes bar3 { 0%, 100% { height: 5px; } 50% { height: 14px; } }
+@media (max-width: 700px) { .music-toggle { left: 0.8rem; bottom: 0.8rem; width: 40px; height: 40px; } }
+
 /* Dot nav */
 #dotNav {
   position: fixed; right: 1.2rem; top: 50%; transform: translateY(-50%);

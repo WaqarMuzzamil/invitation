@@ -1,6 +1,6 @@
 // ==== Configuration: edit these to customize the invitation ====
 const CONFIG = {
-  weddingDate: '2026-10-17T10:00:00', // used by countdown
+  weddingDate: '2026-10-18T14:00:00', // used by countdown
 };
 
 // ==== Envelope opening intro ====
@@ -35,12 +35,17 @@ function startBackgroundMusic() {
   bgMusic.volume = 0.5;
   bgMusic.play()
     .then(() => setMusicState(true))
-    .catch(() => setMusicState(false)); // autoplay blocked; user can start it via the toggle
+    .catch((error) => {
+      setMusicState(false);
+      console.error('Background music could not play:', error, bgMusic.error);
+    });
 }
 
 musicToggle.addEventListener('click', () => {
   if (bgMusic.paused) {
-    bgMusic.play().then(() => setMusicState(true)).catch(() => {});
+    bgMusic.play()
+      .then(() => setMusicState(true))
+      .catch((error) => console.error('Background music could not play:', error, bgMusic.error));
   } else {
     bgMusic.pause();
     setMusicState(false);

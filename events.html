@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waqar &amp; Aqsa | Wedding Invitation &amp; Events</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Classic ornate outer frame -->
+<div class="page-frame" aria-hidden="true">
+  <span class="frame-corner tl">❦</span>
+  <span class="frame-corner tr">❦</span>
+  <span class="frame-corner bl">❦</span>
+  <span class="frame-corner br">❦</span>
+</div>
+
+<!-- Floral petals drifting over the whole page -->
+<div class="petals" aria-hidden="true">
+  <span class="petal p1">❀</span>
+  <span class="petal p2">❀</span>
+  <span class="petal p3">❀</span>
+  <span class="petal p4">❀</span>
+  <span class="petal p5">❀</span>
+</div>
+
+<!-- Background music: drop your own royalty-free track at assets/music.mp3 -->
+<audio id="bgMusic" loop preload="auto" playsinline>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+<button type="button" id="musicToggle" class="music-toggle" aria-label="Toggle background music" aria-pressed="false">
+  <span class="music-bars"><span></span><span></span><span></span></span>
+</button>
+
+<!-- Envelope opening intro -->
+<div id="envelopeIntro">
+  <div class="intro-petals" aria-hidden="true">
+    <span class="petal p1">❀</span>
+    <span class="petal p2">❀</span>
+    <span class="petal p3">❀</span>
+    <span class="petal p4">❀</span>
+  </div>
+  <div class="envelope-scene">
+    <button type="button" class="envelope" id="envelopeBtn" aria-label="Open your invitation">
+      <span class="envelope-pocket-back"></span>
+      <span class="letter">
+        <span class="letter-monogram">W<span class="amp">&amp;</span>A</span>
+        <span class="letter-line">You're Invited</span>
+      </span>
+      <span class="envelope-pocket-front"></span>
+      <span class="envelope-flap"></span>
+      <span class="seal">W&amp;A</span>
+    </button>
+    <p class="tap-hint" id="tapHint">Tap the envelope to open your invitation</p>
+  </div>
+</div>
+
+<!-- Floating nav dots -->
+<nav id="dotNav" aria-label="Section navigation">
+  <a href="#hero" class="dot active" data-label="Home"></a>
+  <a href="#couple" class="dot" data-label="Couple"></a>
+  <a href="#countdown" class="dot" data-label="Countdown"></a>
+  <a href="#timeline" class="dot" data-label="Program &amp; Venues"></a>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="section hero">
+  <div class="monogram">W<span class="amp">&amp;</span>A</div>
+  <div class="ornament top"></div>
+  <p class="eyebrow">Together with their families</p>
+  <h1 class="names"><span>Waqar</span><span class="amp">&amp;</span><span>Aqsa</span></h1>
+  <p class="tagline">Request the pleasure of your company as they celebrate their wedding</p>
+  <div class="hero-date">
+    <span class="bismillah" lang="ar" dir="rtl">إن شاء الله</span>
+  </div>
+  <a href="#couple" class="scroll-cue" aria-label="Scroll to begin">
+    <span class="scroll-cue-mouse"><span class="scroll-cue-wheel"></span></span>
+    <span class="scroll-cue-text">Scroll</span>
+  </a>
+  <div class="ornament bottom"></div>
+</section>
+
+<!-- COUPLE -->
+<section id="couple" class="section couple">
+  <h2 class="section-title">The Bride and Groom</h2>
+  <div class="couple-grid">
+    <div class="couple-card">
+      <div class="portrait">WM</div>
+      <h3>Waqar</h3>
+      <p class="rel">Son of Mr. &amp; Mrs. Raja Muzzamil Hussain</p>
+    </div>
+    <div class="couple-and">&amp;</div>
+    <div class="couple-card">
+      <div class="portrait">AN</div>
+      <h3>Aqsa</h3>
+      <p class="rel">Daughter of Mr. &amp; Mrs. Raja Mubashir Nadeem</p>
+    </div>
+  </div>
+  <p class="blessing">With the blessings of ALLAH, We joyfully invite you to the walima celebration of Waqar &amp; Aqsa.
+  As they begin their journey together in faith and love, your presence will make this blessed occasion all the more special ❤</p>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countdown" class="section countdown-section">
+  <h2 class="section-title">Counting Down to Forever</h2>
+  <div class="countdown" id="countdown">
+    <div class="cd-box"><span id="cd-days">00</span><small>Days</small></div>
+    <div class="cd-box"><span id="cd-hours">00</span><small>Hours</small></div>
+    <div class="cd-box"><span id="cd-mins">00</span><small>Minutes</small></div>
+    <div class="cd-box"><span id="cd-secs">00</span><small>Seconds</small></div>
+  </div>
+</section>
+
+<!-- TIMELINE / VENUE -->
+<section id="timeline" class="section timeline-section">
+  <h2 class="section-title">Wedding Program &amp; Venues</h2>
+  <div class="program-venue-grid">
+    <div class="program-venue-column">
+      <h3 class="program-venue-heading">Program</h3>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <h4>Mehndi</h4>
+          <p class="tl-date">Oct 15, 2026, 6:00 PM</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <h4>Barat</h4>
+          <p class="tl-date">Oct 17, 2026, 1:00 PM</p>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <h4>Walima</h4>
+          <p class="tl-date">Oct 18, 2026, 2:00 PM</p>
+        </div>
+      </div>
+    </div>
+    <div class="program-venue-column">
+      <h3 class="program-venue-heading">Venues</h3>
+      <div class="venue-card">
+        <p class="tl-date">Mehndi &amp; Walima</p>
+        <h3>Ejaz Marriage Hall</h3>
+        <a class="btn-outline" href="https://maps.app.goo.gl/Tw7qyYGY1WCsDgK66" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+      </div>
+      <div class="venue-card">
+        <p class="tl-date">Barat</p>
+        <h3>Raja Mehram House</h3>
+        <a class="btn-outline" href="https://maps.app.goo.gl/HSWewrfg6WZedh1s8?g_st=iw" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Waqar &amp; Aqsa</p>
+  <p class="footer-note">Made with ❤ for our special day</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

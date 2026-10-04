@@ -120,6 +120,8 @@ setInterval(updateCountdown, 1000);
 // ==== Scratch to reveal ====
 (function initScratchCard() {
   const canvas = document.getElementById('scratchCanvas');
+  if (!canvas) return;
+
   const ctx = canvas.getContext('2d', { willReadFrequently: true });
   const wrap = document.querySelector('.scratch-wrap');
   const AUTO_COMPLETE_THRESHOLD = 0.2; // auto-finish once 20% is scratched
